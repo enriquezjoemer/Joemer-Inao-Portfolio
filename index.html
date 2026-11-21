@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Joemer Inao is a web and software developer building fast, accessible and maintainable products.">
+  <title>Joemer Inao | Web &amp; Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png"/>
+</head>
+<body>
+  <div id="progress" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Main">
+      <a href="#home" class="logo"><span>&lt;</span>JAEI<span>/&gt;</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Switch light or dark mode"><span class="sun">☀</span><span class="moon">☾</span></button>
+        <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <p class="pill"><i class="pulse"></i> Open for freelance work and internships</p>
+        <h1 class="split" data-text="Joemer Inao"></h1>
+        <p class="hero-role">I'm a <span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+        <p class="hero-text">I build maintainable, fast and accessible web software, and I keep sharpening my engineering skills with every project.</p>
+        <div class="hero-cta">
+          <a class="btn magnetic" href="#projects"><span>View my work</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost magnetic" href="assets/Joemer-Inao-CV.pdf" download><span>Download my CV</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+        </div>
+      </div>
+      <div class="marquee" aria-label="Technologies and tools I use">
+        <p class="marquee-label">Technologies and tools I work with</p>
+        <div class="marquee-track" id="marquee"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT: numbered sequence -->
+    <section id="about" class="container">
+      <h2 class="reveal">About me</h2>
+      <div class="steps" id="steps">
+        <div class="steps-line"><i id="steps-fill"></i></div>
+
+        <article class="step">
+          <div class="step-num"><b data-n="1">00</b></div>
+          <div class="step-body">
+            <h3 class="step-title">Who I am</h3>
+            <div class="about-grid">
+              <div class="photo-stage reveal" id="photo-stage">
+                <span class="ring r1"></span><span class="ring r2"></span>
+                <img src="assets/images/favicon-32x32.png" alt="Portrait of Joemer Inao" width="900" height="1000">
+              </div>
+              <div class="about-text reveal">
+                <p>I'm a web and software developer who turns ideas into fast, accessible and maintainable products. I enjoy building across the stack, from polished interfaces in React to reliable back ends in Django and Laravel.</p>
+                <p>I write clean, well-structured code and grow through every project I ship. I'm open to freelance clients and internships where I can deliver real value from day one.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-num"><b data-n="2">00</b></div>
+          <div class="step-body">
+            <h3 class="step-title">Educational attainment</h3>
+            <div class="edu-grid">
+              <button class="diploma reveal" id="diploma-btn" aria-label="View my college diploma">
+                <span class="diploma-frame"><img id="diploma-img" src="assets/about/diploma.jpg" alt="College diploma" onerror="this.remove()"><span class="diploma-ph">🎓<br>Add your diploma image at<br><code>assets/about/diploma.jpg</code></span></span>
+                <span class="diploma-cap">View my diploma</span>
+              </button>
+              <div>
+                <ol class="edu-list" id="edu-list"></ol>
+                <ul class="chips reveal" id="edu-highlights"></ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-num"><b data-n="3">00</b></div>
+          <div class="step-body">
+            <h3 class="step-title">Hobbies and interests</h3>
+            <div class="hobby-grid" id="hobby-grid"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container">
+      <h2 class="reveal">Skills</h2>
+      <div class="skill-grid" id="skill-grid"></div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2 class="reveal">Projects</h2>
+      <div class="cards" id="project-grid"></div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2 class="reveal">Contact me</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal" id="contact-info"></div>
+        <form id="contact-form" class="form reveal" novalidate>
+          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name"><span class="error" id="name-error"></span></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"><span class="error" id="email-error"></span></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5"></textarea><span class="error" id="message-error"></span></div>
+          <button class="btn magnetic" type="submit"><span>Send message</span></button>
+          <p class="status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><p>&copy; <span id="year"></span> Joemer Inao. Built from scratch with HTML, CSS and JavaScript.</p></footer>
+
+  <dialog id="lightbox" class="lightbox"><button class="icon-btn" id="lb-close" aria-label="Close">✕</button><img id="lb-img" alt="College diploma"></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
