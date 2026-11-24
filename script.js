@@ -2,7 +2,7 @@
    CONFIG - edit this object to customize the whole portfolio
    ============================================================ */
 const CONFIG = {
-  roles: ['Web Developer', 'Software Developer', 'Problem Solver', 'Lifelong Learner', 'Lovable Pogi'],
+  roles: ['Aspiring Full-Stack Web Developer', 'Curious & Analytical Software Developer', 'Problem-Solving Computer Science Graduate', 'Self-Driven Technology Enthusiast',],
 
   // Logos come from the Devicon CDN. "inv" = icon is black, so it gets inverted in dark mode.
   tech: [
