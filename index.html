@@ -20,8 +20,17 @@
   <header class="header">
     <nav class="nav container" aria-label="Main">
       <a href="#home" class="logo"><span>&lt;</span>JAEI<span>/&gt;</span></a>
-      
-      <!-- Navigation Actions -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Switch light or dark mode"><span class="sun">☀</span><span class="moon">☾</span></button>
+        <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      </div>       <!-- Navigation Actions -->
 <div class="nav-actions">
 
     <!-- Location Indicator -->
@@ -45,26 +54,15 @@
             Philippines
         </span>
     </div>
-  
 
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button id="theme-toggle" class="icon-btn" aria-label="Switch light or dark mode"><span class="sun">☀</span><span class="moon">☾</span></button>
-        <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
-      </div>
+
     </nav>
   </header>
 
   <main>
     <!-- HOME -->
     <section id="home" class="hero">
-      <div class="container hero-inner">
+      <div class="container hero-inner"> 
         <p class="pill"><i class="pulse"></i> Open for freelance work </p>
         <h1 class="split" data-text="Joemer Inao"></h1>
         <h5 class="hero-hi">Hi, I'm</h5>
