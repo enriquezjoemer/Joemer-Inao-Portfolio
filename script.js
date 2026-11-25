@@ -198,3 +198,4 @@ form.addEventListener('submit', e => {
   status.textContent = 'Opening your email app. To receive messages directly, connect a service like Formspree.';
   form.reset();
 });
+

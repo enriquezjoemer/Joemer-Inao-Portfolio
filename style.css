@@ -210,3 +210,90 @@ code{font-size:.8em;background:var(--bg);padding:.1em .4em;border-radius:6px}
   .js .reveal,.split .ch{opacity:1;transform:none;filter:none}
   .marquee-track{overflow-x:auto}
 }
+
+/* Navigation Actions */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Location Indicator */
+
+.location-indicator {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* Location Text */
+
+.location-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Animated Location Dot */
+
+.location-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Pulsing Animation */
+
+.location-dot::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 1px solid #22c55e;
+    border-radius: 50%;
+    animation: locationPulse 1.8s ease-out infinite;
+}
+
+@keyframes locationPulse {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .location-indicator {
+        font-size: 11px;
+        gap: 7px;
+    }
+
+    .location-text svg {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .location-dot::after {
+        animation: none;
+    }
+
+}
