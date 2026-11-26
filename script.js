@@ -21,7 +21,7 @@ const CONFIG = {
   education: [
     { level: 'College', school: 'Negros Oriental State University - Bayawan-Santa Catalina Campus', detail: 'Bachelor of Science in Computer Science - cGPA : 1.72', years: '2019 - 2022' },
     { level: 'Senior High School', school: 'Miguel L. Daclan National High School', detail: 'Academic / GAS', years: '2017 - 2018' },
-    { level: 'Junior High School', school: 'Vicente Z. Badon Campus', detail: '1st Honorable Mention', years: '2013 - 2016' },
+    { level: 'Junior High School', school: 'CNHS - Vicente Z. Badon Campus', detail: '1st Honorable Mention', years: '2013 - 2016' },
     { level: 'Elementary', school: 'Arcadio L. Vergara Elem. School', detail: 'Awarded in recognition of diligence, perseverance, and a consistent commitment to school responsibilities', years: '2009 - 2012' }
   ],
   educationHighlights: ['Computer science foundation', 'Hands-on full-stack projects', 'Self-directed learner', 'Strong problem solving', 'Team collaboration', 'Clear communication'],
