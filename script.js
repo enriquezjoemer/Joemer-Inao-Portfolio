@@ -19,10 +19,10 @@ const CONFIG = {
 
   // Education: newest first. Replace the placeholder names and years.
   education: [
-    { level: 'College', school: 'Negros Oriental State University - Bayawan-Santa Catalina Campus', detail: 'Bachelor of Science in Computer Science', years: 'YYYY - YYYY' },
-    { level: 'Senior High School', school: 'Your Senior High School', detail: 'Strand / track', years: 'YYYY - YYYY' },
-    { level: 'Junior High School', school: 'Your Junior High School', detail: 'Add an achievement or award', years: 'YYYY - YYYY' },
-    { level: 'Elementary', school: 'Your Elementary School', detail: 'Add an achievement or award', years: 'YYYY - YYYY' }
+    { level: 'College', school: 'Negros Oriental State University - Bayawan-Santa Catalina Campus', detail: 'Bachelor of Science in Computer Science - cGPA : 1.72', years: '2019 - 2022' },
+    { level: 'Senior High School', school: 'Miguel L. Daclan National High School', detail: 'Academic / GAS', years: '2017 - 2018' },
+    { level: 'Junior High School', school: 'Vicente Z. Badon Campus', detail: '1st Honorable Mention', years: '2013 - 2016' },
+    { level: 'Elementary', school: 'Arcadio L. Vergara Elem. School', detail: 'Awarded in recognition of diligence, perseverance, and a consistent commitment to school responsibilities', years: '2009 - 2012' }
   ],
   educationHighlights: ['Computer science foundation', 'Hands-on full-stack projects', 'Self-directed learner', 'Strong problem solving', 'Team collaboration', 'Clear communication'],
 
@@ -32,7 +32,7 @@ const CONFIG = {
     { icon: '🎮', title: 'Gaming', text: 'Strategy and co-op games that sharpen teamwork and planning.' },
     { icon: '🎧', title: 'Music', text: 'My go-to focus fuel during long coding sessions.' },
     { icon: '📚', title: 'Reading tech', text: 'Docs, blogs and tutorials that keep me current.' },
-    { icon: '🏀', title: 'Sports', text: 'Staying active and learning to work in a team.' },
+    { icon: '🏸', title: 'Badminton', text: 'Staying active and learning to work in a team.' },
     { icon: '📷', title: 'Photography', text: 'Training my eye for layout, light and detail.', wide: true }
   ],
 
@@ -46,12 +46,12 @@ const CONFIG = {
 
   // Projects: swap in your real work. Leave a link as '' to hide it.
   projects: [
-    { title: 'Project one', text: 'Describe what it does and the problem it solves in one or two sentences.', tags: ['HTML', 'CSS', 'JavaScript'], live: '#', code: '#', g: 'linear-gradient(135deg,#4f5dff,#10b5a0)' },
+    { title: 'Portfolio Website', text: 'A professional web development portfolio showcasing my technical expertise, project accomplishments, and qualifications while establishing a credible digital presence for prospective employers and clients.', tags: ['HTML', 'CSS', 'JavaScript'], live: 'https://enriquezjoemer.github.io/Joemer-Inao-Portfolio/', code: 'https://github.com/enriquezjoemer/Joemer-Inao-Portfolio', g: 'linear-gradient(135deg,#4f5dff,#10b5a0)' },
     { title: 'Project two', text: 'Describe what you built and what you learned while making it.', tags: ['React', 'TypeScript'], live: '#', code: '#', g: 'linear-gradient(135deg,#c455ff,#4f5dff)' },
     { title: 'Project three', text: 'Add a full-stack project here, even a simple one. Finished work counts.', tags: ['Laravel', 'MySQL'], live: '', code: '#', g: 'linear-gradient(135deg,#ff7a59,#c455ff)' }
   ],
 
-  contact: { email: 'you@example.com', location: 'Negros Oriental, Philippines', github: 'https://github.com/your-username', linkedin: 'https://linkedin.com/in/your-username' }
+  contact: { email: 'joemerinao024@gmail.com', location: 'Brgy. Sangke, Hinoba-an, Negros Occidental, Philippines', github: 'https://github.com/enriquezjoemer', linkedin: 'https://linkedin.com/in/joemer-inao-348a303b6' }
 };
 
 /* ============================================================ */
