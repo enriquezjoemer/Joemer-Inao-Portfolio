@@ -93,6 +93,7 @@ $('#contact-info').innerHTML = [['✉', 'Email', c.email, 'mailto:' + c.email], 
 
 /* 4. HERO: split-letter name + typing roles */
 const h1 =  document.querySelector('.split');
+
 if (h1) {
   h1.innerHTML = [...h1.dataset.text]
   .map((ch, i) => 
