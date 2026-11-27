@@ -49,7 +49,7 @@ code{font-size:.8em;background:var(--bg);padding:.1em .4em;border-radius:6px}
 .nav-links a{position:relative;display:block;padding:.35rem .9rem;border-radius:999px;color:var(--muted);font-weight:500;transition:color .2s,background .2s}
 .nav-links a:hover{color:var(--text)}
 .nav-links a.active{color:var(--text);background:color-mix(in srgb,var(--accent) 14%,transparent)}
-.nav-actions{display:flex;gap:.5rem}
+.nav-actions{display:flex; align-items: center; gap:.20px}
 .icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:1.1rem;cursor:pointer;display:grid;place-items:center;transition:transform .3s,border-color .2s}
 .icon-btn:hover{transform:rotate(18deg) scale(1.08);border-color:var(--accent)}
 .moon{display:none}[data-theme="dark"] .sun{display:none}[data-theme="dark"] .moon{display:block}
@@ -64,8 +64,20 @@ code{font-size:.8em;background:var(--bg);padding:.1em .4em;border-radius:6px}
 @keyframes ping{70%{box-shadow:0 0 0 10px transparent}}
 @keyframes up{from{opacity:0;transform:translateY(24px)}}
 .hero h1{font-size:clamp(3rem,11vw,7.2rem);font-weight:800;line-height:1.02;letter-spacing:-.04em;margin:1.2rem 0 .3rem;background:linear-gradient(100deg,var(--text) 35%,var(--accent) 65%,var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.split .ch{display:inline-block;opacity:0;transform:translateY(60%) rotate(6deg);animation:ch .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*55ms + 150ms)}
-@keyframes ch{to{opacity:1;transform:none}}
+
+.split .ch{
+    display:inline-block;
+    opacity:0;
+    transform:translateY(60%) rotate(6deg);
+    animation:ch .7s cubic-bezier(.2,.8,.2,1) forwards;
+    animation-delay:calc(var(--i)*55ms + 150ms)
+}
+@keyframes ch{
+    to {
+        opacity:1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
 .hero-role{font-family:"Sora";font-size:clamp(1.3rem,4vw,2rem);font-weight:600;color:var(--accent);min-height:1.6em;animation:up .8s .5s both}
 .caret{display:inline-block;width:3px;height:1em;margin-left:4px;background:var(--accent);vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
@@ -211,14 +223,6 @@ code{font-size:.8em;background:var(--bg);padding:.1em .4em;border-radius:6px}
   .marquee-track{overflow-x:auto}
 }
 
-/* Navigation Actions */
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 /* Location Indicator */
 
 .location-indicator {
@@ -228,7 +232,7 @@ code{font-size:.8em;background:var(--bg);padding:.1em .4em;border-radius:6px}
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--text);
 }
 
 /* Location Text */
