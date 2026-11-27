@@ -188,8 +188,31 @@ code{font-size:.8em;background:var(--bg);padding:.1em .4em;border-radius:6px}
 /* 9. PROJECTS */
 .cards{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
 .card{display:flex;flex-direction:column}
-.card-thumb{height:150px;display:grid;place-items:center;font-family:"Sora";font-weight:800;font-size:2.6rem;color:rgba(255,255,255,.9);background:var(--g);transition:transform .6s}
-.card:hover .card-thumb{transform:scale(1.08)}
+.card-thumb {
+    height:150px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    place-items:center;
+    font-family:"Sora";
+    font-weight:800;
+    font-size:2.6rem;
+    color:rgba(255,255,255,.9);
+    background:var(--g);
+    transition:transform .6s
+}
+.card-thumb img {
+    width: 70%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.card:hover .card-thumb {
+    transform:scale(1.08)
+}
+
 .card-thumb-wrap{overflow:hidden}
 .card-body{display:flex;flex-direction:column;gap:.75rem;padding:1.5rem;flex:1}
 .card-body p{color:var(--muted);flex:1}

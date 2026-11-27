@@ -46,7 +46,7 @@ const CONFIG = {
 
   // Projects: swap in your real work. Leave a link as '' to hide it.
   projects: [
-    { title: 'Portfolio Website', text: 'A professional web development portfolio showcasing my technical expertise, project accomplishments, and qualifications while establishing a credible digital presence for prospective employers and clients.', tags: ['HTML', 'CSS', 'JavaScript'], live: 'https://enriquezjoemer.github.io/Joemer-Inao-Portfolio/', code: 'https://github.com/enriquezjoemer/Joemer-Inao-Portfolio', g: 'linear-gradient(135deg,#4f5dff,#10b5a0)' },
+    { title: 'Portfolio Website', image: 'assets/projects/portfoliowebsite.png', text: 'A professional web development portfolio showcasing my technical expertise, project accomplishments, and qualifications while establishing a credible digital presence for prospective employers and clients.', tags: ['HTML', 'CSS', 'JavaScript'], live: 'https://enriquezjoemer.github.io/Joemer-Inao-Portfolio/', code: 'https://github.com/enriquezjoemer/Joemer-Inao-Portfolio', g: 'linear-gradient(135deg,#4f5dff,#10b5a0)' },
     { title: 'Project two', text: 'Describe what you built and what you learned while making it.', tags: ['React', 'TypeScript'], live: '#', code: '#', g: 'linear-gradient(135deg,#c455ff,#4f5dff)' },
     { title: 'Project three', text: 'Add a full-stack project here, even a simple one. Finished work counts.', tags: ['Laravel', 'MySQL'], live: '', code: '#', g: 'linear-gradient(135deg,#ff7a59,#c455ff)' }
   ],
@@ -86,7 +86,48 @@ $('#edu-list').innerHTML = CONFIG.education.map((e, i) => `<li class="edu-item r
 $('#edu-highlights').innerHTML = CONFIG.educationHighlights.map(h => `<li>${esc(h)}</li>`).join('');
 $('#hobby-grid').innerHTML = CONFIG.hobbies.map((h, i) => `<article class="hobby spot reveal ${h.wide ? 'wide' : ''}" style="--i:${i}"><span class="ico">${h.icon}</span><h4>${esc(h.title)}</h4><p>${esc(h.text)}</p></article>`).join('');
 $('#skill-grid').innerHTML = CONFIG.skills.map((g, i) => `<article class="skill-card spot reveal" style="--i:${i}"><h3>${esc(g.group)}</h3>${g.items.map(([n, v]) => `<div class="bar"><div class="bar-top"><span>${esc(n)}</span><span>${v}%</span></div><div class="bar-track"><span class="bar-fill" style="--w:${v}%"></span></div></div>`).join('')}</article>`).join('');
-$('#project-grid').innerHTML = CONFIG.projects.map((p, i) => `<article class="card spot reveal" style="--i:${i}"><div class="card-thumb-wrap"><div class="card-thumb" style="--g:${p.g}">${esc(p.title.charAt(0))}</div></div><div class="card-body"><h3>${esc(p.title)}</h3><p>${esc(p.text)}</p><ul class="tags">${p.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul><div class="card-links">${p.live ? `<a class="card-link" href="${p.live}">Live demo</a>` : ''}${p.code ? `<a class="card-link" href="${p.code}">Source code</a>` : ''}</div></div></article>`).join('');
+
+/*$('#project-grid').innerHTML = CONFIG.projects.map((p, i) => `<article class="card spot reveal" style="--i:${i}"><div class="card-thumb-wrap"><div class="card-thumb" style="--g:${p.g}">${esc(p.title.charAt(0))}</div></div><div class="card-body"><h3>${esc(p.title)}</h3><p>${esc(p.text)}</p><ul class="tags">${p.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul><div class="card-links">${p.live ? `<a class="card-link" href="${p.live}">Live demo</a>` : ''}${p.code ? `<a class="card-link" href="${p.code}">Source code</a>` : ''}</div></div></article>`).join('');*/
+$('#project-grid').innerHTML = CONFIG.projects.map((p, i) => `
+    <article class="card spot reveal" style="--i:${i}">
+
+        <div class="card-thumb-wrap">
+
+            <div class="card-thumb" style="--g:${p.g}">
+
+                ${p.image
+                    ? `<img src="${esc(p.image)}"
+                            alt="${esc(p.title)} project preview"
+                            loading="lazy">`
+                    : esc(p.title.charAt(0))
+                }
+
+            </div>
+
+        </div>
+
+        <div class="card-body">
+
+            <h3>${esc(p.title)}</h3>
+
+            <p>${esc(p.text)}</p>
+
+            <ul class="tags">
+                ${p.tags.map(t => `<li>${esc(t)}</li>`).join('')}
+            </ul>
+
+            <div class="card-links">
+
+                ${p.live ? `<a class="card-link" href="${p.live}">Live demo</a>` : ''}
+
+                ${p.code ? `<a class="card-link" href="${p.code}">Source code</a>` : ''}
+
+            </div>
+
+        </div>
+
+    </article>
+`).join('');
 const c = CONFIG.contact;
 $('#contact-info').innerHTML = [['✉', 'Email', c.email, 'mailto:' + c.email], ['📍', 'Location', c.location], ['⌥', 'GitHub', c.github.replace('https://', ''), c.github], ['in', 'LinkedIn', c.linkedin.replace('https://', ''), c.linkedin]]
   .map(([i, l, v, h]) => `<${h ? `a href="${h}"` : 'div'} class="spot"><span class="ico">${i}</span><span><small>${l}</small>${esc(v)}</span></${h ? 'a' : 'div'}>`).join('');
@@ -111,22 +152,6 @@ if (!text) return;
   .join('');
 h1.setAttribute('aria-label', text);
 }); 
-
-/*
-const h1 = document.querySelector('.split');
-
-if (h1) {
-    h1.innerHTML = [...h1.dataset.text]
-        .map((ch, i) =>
-            ch === ' '
-                ? ' '
-                : `<span class="ch" style="--i:${i}">${ch}</span>`)
-        .join('');
-
-    h1.setAttribute('aria-label', h1.dataset.text);
-}
-*/
-
 
 
 const typed = $('#typed'); let ri = 0, ci = 0, del = false;
