@@ -63,16 +63,33 @@ code{font-size:.8em;background:var(--bg);padding:.1em .4em;border-radius:6px}
 .pulse{width:9px;height:9px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 0 var(--accent2);animation:ping 2s infinite}
 @keyframes ping{70%{box-shadow:0 0 0 10px transparent}}
 @keyframes up{from{opacity:0;transform:translateY(24px)}}
-.hero h1{font-size:clamp(3rem,11vw,7.2rem);font-weight:800;line-height:1.02;letter-spacing:-.04em;margin:1.2rem 0 .3rem;background:linear-gradient(100deg,var(--text) 35%,var(--accent) 65%,var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 {
+    font-size: clamp(3rem,11vw,7.2rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -.04em;
+    margin: 1.2rem 0 .3rem;
+    background: linear-gradient(100deg,
+                var(--text) 35%,
+                var(--accent) 65%,
+                var(--accent2)
+                );
+    -webkit-background-clip: text;
+    background-clip: text;
 
-.split .ch {
+    color: var(--text);
+    -webkit-text-fill-color: var(--text);
+
+}
+
+.split .ch{
     display: inline-block;
-    opacity: 1;
-    transform: none;
-    animation: ch .7s cubic-bezier(.2,.8,.2,1) both;
+    opacity: 0;
+    transform: translateY(60%) rotate(6deg);
+    animation: revealName .7s cubic-bezier(.2,.8,.2,1) both;
     animation-delay: calc(var(--i) *55ms + 150ms);
 }
-@keyframes ch {
+@keyframes revealName {
     from {
         opacity: 0;
         transform: translateY(60%) rotate(6deg);

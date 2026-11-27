@@ -92,16 +92,43 @@ $('#contact-info').innerHTML = [['✉', 'Email', c.email, 'mailto:' + c.email], 
   .map(([i, l, v, h]) => `<${h ? `a href="${h}"` : 'div'} class="spot"><span class="ico">${i}</span><span><small>${l}</small>${esc(v)}</span></${h ? 'a' : 'div'}>`).join('');
 
 /* 4. HERO: split-letter name + typing roles */
+
+document.addEventListener('DOMContentLoaded', () => {
 const h1 =  document.querySelector('.split');
 
+if (!h1) return;
+  const text = h1.dataset.text;
+
+if (!text) return;
+
+  h1.innerHTML = [...text]
+   .map((char, i) => {
+    if (char === ' ') {
+      return '&nbsp;';
+    }
+    return `<span class="ch" style="--i:${i}">${char}</span>`;
+  })
+  .join('');
+h1.setAttribute('aria-label', text);
+}); 
+
+/*
+const h1 = document.querySelector('.split');
+
 if (h1) {
-  h1.innerHTML = [...h1.dataset.text]
-  .map((ch, i) => 
-    ch === ' ' 
-      ? ' '
-       : `<span class="ch" style="--i:${i}">${ch}</span>`)
-       .join('');
-h1.setAttribute('aria-label', h1.dataset.text);}
+    h1.innerHTML = [...h1.dataset.text]
+        .map((ch, i) =>
+            ch === ' '
+                ? ' '
+                : `<span class="ch" style="--i:${i}">${ch}</span>`)
+        .join('');
+
+    h1.setAttribute('aria-label', h1.dataset.text);
+}
+*/
+
+
+
 const typed = $('#typed'); let ri = 0, ci = 0, del = false;
 (function type() {
   const w = CONFIG.roles[ri]; typed.textContent = w.slice(0, ci);
