@@ -47,8 +47,8 @@ const CONFIG = {
   // Projects: swap in your real work. Leave a link as '' to hide it.
   projects: [
     { title: 'Portfolio Website', image: 'assets/projects/portfoliowebsite.png', text: 'A professional web development portfolio showcasing my technical expertise, project accomplishments, and qualifications while establishing a credible digital presence for prospective employers and clients.', tags: ['HTML', 'CSS', 'JavaScript'], live: 'https://enriquezjoemer.github.io/Joemer-Inao-Portfolio/', code: 'https://github.com/enriquezjoemer/Joemer-Inao-Portfolio', g: 'linear-gradient(135deg,#4f5dff,#10b5a0)' },
-    { title: 'Smart To-Do  App', text: 'Describe what you built and what you learned while making it.', tags: ['React', 'TypeScript'], live: '#', code: '#', g: 'linear-gradient(135deg,#c455ff,#4f5dff)' },
-    { title: 'Expense Tracker', text: 'Add a full-stack project here, even a simple one. Finished work counts.', tags: ['Laravel', 'MySQL'], live: '', code: '#', g: 'linear-gradient(135deg,#ff7a59,#c455ff)' }
+    { title: 'TaskFlow Manager', text: 'Describe what you built and what you learned while making it.', tags: ['React', 'TypeScript'], live: '#', code: '#', g: 'linear-gradient(135deg,#c455ff,#4f5dff)' },
+    { title: 'SpendWise Tracker', text: 'Add a full-stack project here, even a simple one. Finished work counts.', tags: ['Laravel', 'MySQL'], live: '', code: '#', g: 'linear-gradient(135deg,#ff7a59,#c455ff)' }
   ],
 
   contact: { email: 'joemerinao024@gmail.com', location: 'Brgy. Sangke, Hinoba-an, Negros Occidental, Philippines', github: 'https://github.com/enriquezjoemer', linkedin: 'https://linkedin.com/in/joemer-inao-348a303b6' }
